@@ -54,7 +54,6 @@ class Chat extends Component<any, State> {
   constructor(props:any) {
     super(props);
     this.state = { chats: [] };
-    this.scrollBottom = React.createRef();
   }
   
 
@@ -144,20 +143,18 @@ class Chat extends Component<any, State> {
 
             return (
               <Fragment key={index}>
-                { (isFirst || !inSequence || hasDelay) && (
+                {(isFirst || !inSequence || hasDelay) && (
                   <div className={`d-block w-100 font-weight-bold text-dark mt-4 pb-1 px-1 text-${position}`} style={{ fontSize: '0.9rem' }}>
                     <span className="d-block" style={{ fontSize: '1.6rem' }}>
                       {String.fromCodePoint(...mood)}
                     </span>
                     <span>{chat.user || 'Anonymous'}</span>
                   </div>
-            ) }
-            
-            <ChatMessage message={chat.message} position={position} />
+                )}
+                <ChatMessage message={chat.message} position={position} />
               </Fragment>
             )
           })}
-          <div style={{ float:"left", clear: "both" }} ref={this.scrollBottom} />
         </ChatBody>
         <ChatMessageBox className="border-top border-gray w-100 px-4 d-flex align-items-center bg-light">
           <textarea 

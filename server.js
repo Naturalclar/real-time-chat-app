@@ -46,7 +46,6 @@ app.prepare()
 
       chatHistory.messages.push(chat);
       pusher.trigger('chat-room', 'new-message', { chat });
-      res.json({status: 'success'})
     });
 
     // Retrieve the chat history
