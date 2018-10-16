@@ -1,5 +1,7 @@
 # Realtime Chat Application with Sentiment Analysis
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Naturalclar/real-time-chat-app.svg)](https://greenkeeper.io/)
+
 A real time chat application build with [Next.js](https://nextjs.org/) and [Pusher](https://pusher.com/).
 
 Referenced [this Medium Post](https://codeburst.io/build-a-chat-app-with-sentiment-analysis-using-next-js-c43ebf3ea643) about making the said application.
